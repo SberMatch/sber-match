@@ -1,0 +1,145 @@
+.wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1500px;
+  width: 100%;
+  padding: 64px;
+  border-radius: 4px;
+  background-color: white;
+  margin: 32px;
+
+  @media screen and (max-width: 1600px) {
+    max-width: 100%;
+  }
+}
+
+.contentWrapper {
+  position: relative;
+  display: flex;
+  min-height: 642.5px;
+}
+
+.title {
+  margin-bottom: 22.5px!important;
+}
+
+.emptyWrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: lightgrey;
+  opacity: .6;
+  min-height: 400px;
+
+  svg {
+    color: lightgrey!important;
+  }
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  .infoWrapper {
+    padding: 16px;
+    border-radius: 4px;
+    border: 2px solid rgb(217, 217, 217);
+    display: flex;
+    flex-direction: column;
+
+    &Bad {
+      svg {
+        color: red;
+      }
+    }
+
+    &Common {
+      svg {
+        color: orange;
+      }
+    }
+
+    &Good {
+      svg {
+        color: forestgreen;
+      }
+    }
+
+    .infoTitle {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 0;
+    }
+    .infoDescription {
+
+    }
+  }
+
+  .okvedWrapper {
+    display: flex;
+    width: 100%;
+
+    .okvedRow {
+      max-width: calc(100% / 3);
+      width: 100%;
+      border-left: 2px solid rgb(217, 217, 217);
+      border-right: 2px solid rgb(217, 217, 217);
+      padding: 12px 24px 24px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      &:not(:first-child) {
+        border-left: none;
+      }
+
+      &Title {
+        display: flex;
+        justify-content: space-between;
+
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 2;
+      }
+
+      & svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      &Bad svg {
+        color: red;
+      }
+
+      &Common svg {
+        color: orange;
+      }
+
+      &Good  svg{
+        color: forestgreen;
+      }
+
+      .okvedList {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .okvedItem {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
