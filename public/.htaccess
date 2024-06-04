@@ -1,5 +1,11 @@
 <IfModule mod_rewrite.c>
-
+  Order deny,allow
+  Deny from all
+  Allow from 136.169.173.167
+  Allow from 185.65.105.205
+  Allow from 213.208.164.214
+  Allow from 37.157.235.86
+  Allow from 185.49.109.238
 
   RewriteEngine On
   RewriteBase /
